@@ -10,7 +10,7 @@ path = kagglehub.dataset_download(
 )
 download_path = Path(path)
 csv_file = download_path if download_path.is_file() else next(download_path.rglob("*.csv"))
-renamed_path = data_dir / "teleco-churn-data-1.csv"
+renamed_path = data_dir / "teleco-churn-data.csv"
 csv_file.rename(renamed_path)
 
 print("Path to dataset file:", renamed_path)
